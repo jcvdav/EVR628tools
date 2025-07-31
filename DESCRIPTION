@@ -1,0 +1,15 @@
+Package: EVR628tools
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Juan Carlos", "Villaseñor-Derbez",
+      email = "jc_villasenor@miami.edu",
+      role = c("aut", "cre")
+    )
+  )
+Description: An R Package containing data sets and tools to be used in EVR 628
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
