@@ -9,7 +9,9 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: An R Package containing data sets and tools to be used in EVR 628
+Description: An R Package containing data sets and tools to be used in EVR 628.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.2
+URL: https://jcvdav.github.io/EVR628tools/
