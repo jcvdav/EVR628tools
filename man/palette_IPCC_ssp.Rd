@@ -20,3 +20,6 @@ A NAMED vector containing pairs for SSP names and colors.
 \description{
 Representative Concentration Pathways (RCPs) and Socio-economic Pathways (SSPs), as indicated by the IPCC AR6 WGI style guide
 }
+\examples{
+palette_IPCC_ssp(ssp = "SSP5-8.5")
+}

@@ -9,6 +9,8 @@
 #' @export
 #'
 #' @examples
+#' palette_IPCC_ssp(ssp = "SSP5-8.5")
+#
 palette_IPCC_ssp <- function(ssp = c("SSP5-8.5",
                                      "SSP3-7.0",
                                      "SSP2-4.5",
