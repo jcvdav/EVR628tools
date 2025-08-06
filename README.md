@@ -49,7 +49,7 @@ head(EVR628tools::data_lionfish)
 #> 5 005-C… Cano…  20.5 -87.2             212           129      15              28
 #> 6 006-P… Paam…  20.5 -87.2             210           139.     22.7            29
 
-# Now let's build ap lot
+# Now let's build a plot
 ggplot(data = EVR628tools::data_lionfish,
        mapping = aes(x = depth_m,
                      y = total_length_mm,

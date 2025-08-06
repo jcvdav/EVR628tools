@@ -45,7 +45,7 @@ library(ggplot2)
 # First, inspect the data
 head(EVR628tools::data_lionfish)
 
-# Now let's build ap lot
+# Now let's build a plot
 ggplot(data = EVR628tools::data_lionfish,
        mapping = aes(x = depth_m,
                      y = total_length_mm,
