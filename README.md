@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Codecov test
+coverage](https://codecov.io/gh/jcvdav/EVR628tools/graph/badge.svg)](https://app.codecov.io/gh/jcvdav/EVR628tools)
 <!-- badges: end -->
 
 `EVR628tools` contains a series of datasets, palettes, and functions to
