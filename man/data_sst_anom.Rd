@@ -6,6 +6,7 @@
 \title{Sea Surface Temperature Anomaly}
 \format{
 ## `data_sst_anom`
+A data.frame with 9 rowns and two columns:
 \describe{
   \item{lat}{Numeric - Latitude in decimal degrees indicating the center of the pixel}
   \item{lon}{Numeric - Longitude in decimal degrees indicating the center of the pixel}
@@ -13,7 +14,9 @@
 }
 }
 \source{
-Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}. The script to generate the data is \url(https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R)
+Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST
+\url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}.
+The script to generate the data is \url{https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R}
 }
 \usage{
 data_sst_anom
@@ -24,12 +27,7 @@ within bounding box (lon_min = -81, lon_max = -79.75, lat_min = 25.25,
 lat_max = 25.75) for 2024, relative to 2000-2023 values.
 }
 \examples{
-library(EVR628tools)
 # Look at the first 10 rows
-head(data_sst, 10)
-# Make a time series plot
-ggplot(data = data_sst,
-       mapping = aes(x = date, y = temperature_C)) +
-       geom_line()
+head(EVR628tools::data_sst_anom, 10)
 }
 \keyword{datasets}

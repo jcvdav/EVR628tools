@@ -17,3 +17,6 @@ RoxygenNote: 7.3.2
 URL: https://jcvdav.github.io/EVR628tools/
 Depends: 
     R (>= 3.5)
+Suggests: 
+    dplyr,
+    ggplot2

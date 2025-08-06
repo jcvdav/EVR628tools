@@ -25,8 +25,8 @@ pak::pak("jcvdav/EVR628tools)
 
 The package contains functions with the preface `data_*` and
 `palette_*`. The following example uses one of each. Take a look at the
-[Reference](./refrence) to see a full list of datasts and functions
-available. The task at hand is simple. We’ll use the
+[Reference](./refrence/index.html) to see a full list of datasts and
+functions available. The task at hand is simple. We’ll use the
 `EVR628tools::data_lionfish` data to make a plot showing how fish size
 (length and weight) varies by depth using a scatterplot. We’ll use the
 `EVR628tools::palette_UM()` color palette to color our points by site. I

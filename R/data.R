@@ -84,18 +84,21 @@
 #' lat_max = 25.75).
 #'
 #' @format ## `data_sst`
+#' A data frame with 2,922 rows and two columns:
 #' \describe{
 #'    \item{date}{Date - Date of the observation, in yyyy-mm-dd format}
 #'    \item{temperature_C}{Numeric - Mean sea surface temperatrure, measured in °C}
 #' }
 #'
-#' @source Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}. The script to generate the data is \url(https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R)
+#' @source Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST
+#' \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}.
+#' The script to generate the data is \url{https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R}
 #' @examples
-#' library(EVR628tools)
+#' library(ggplot2)
 #' # Look at the first 10 rows
 #' head(data_sst, 10)
 #' # Make a time series plot
-#' ggplot(data = data_sst,
+#' ggplot(data = EVR628tools::data_sst,
 #'        mapping = aes(x = date, y = temperature_C)) +
 #'        geom_line()
 "data_sst"
@@ -109,21 +112,19 @@
 #' lat_max = 25.75) for 2024, relative to 2000-2023 values.
 #'
 #' @format ## `data_sst_anom`
+#' A data.frame with 9 rowns and two columns:
 #' \describe{
 #'   \item{lat}{Numeric - Latitude in decimal degrees indicating the center of the pixel}
 #'   \item{lon}{Numeric - Longitude in decimal degrees indicating the center of the pixel}
 #'   \item{temperature_anomaly_C}{Numeric - Sea surface temperatrure anomaly relative to daily 2000-2023 values, measured in °C}
 #' }
 #'
-#' @source Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}. The script to generate the data is \url(https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R)
+#' @source Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST
+#' \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}.
+#' The script to generate the data is \url{https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R}
 #' @examples
-#' library(EVR628tools)
 #' # Look at the first 10 rows
-#' head(data_sst, 10)
-#' # Make a time series plot
-#' ggplot(data = data_sst,
-#'        mapping = aes(x = date, y = temperature_C)) +
-#'        geom_line()
+#' head(EVR628tools::data_sst_anom, 10)
 "data_sst_anom"
 
 #"scuba"
