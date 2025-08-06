@@ -1,10 +1,10 @@
-#' Color palette for the Shared Socio-economic Pathways (SSPs)
+#' IPCC color palette for SSPs
 #' @description
-#' Representative Concentration Pathways (RCPs) and Socio-economic Pathways (SSPs), as indicated by the IPCC AR6 WGI style guide
+#' Default colors for Shared Socio-economic Pathways (SSPs), as indicated by the IPCC AR6 WGI style guide
 #'
 #' @param ssp A character vector specifying which SSPs are required. Options are `"SSP5-8.5"`, `"SSP3-7.0"`, `"SSP2-4.5"`, `"SSP1-2.6"` and `"SSP1-1.9"`
 #'
-#' @source Page 9 form the IPCC style gyide: \url{https://www.ipcc.ch/site/assets/uploads/2022/09/IPCC_AR6_WGI_VisualStyleGuide_2022.pdf}
+#' @source Page 9 form the IPCC style guide: \url{https://www.ipcc.ch/site/assets/uploads/2022/09/IPCC_AR6_WGI_VisualStyleGuide_2022.pdf}
 #' @returns A NAMED vector containing pairs for SSP names and colors.
 #' @export
 #'
@@ -16,7 +16,7 @@ palette_IPCC_ssp <- function(ssp = c("SSP5-8.5",
                                      "SSP2-4.5",
                                      "SSP1-2.6",
                                      "SSP1-1.9")){
-  # IPCC reports colores in RGB, so I conver them to HEX using the code below
+  # IPCC reports colores in RGB, so I convert hem to HEX using the code below
   # rgb <- dplyr::tribble(~"SSP", ~"R", ~"G", ~"B",
   #                       "SSP5-8.5", 149, 27, 30,
   #                       "SSP3-7.0", 231, 29, 37,

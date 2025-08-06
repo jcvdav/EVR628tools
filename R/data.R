@@ -3,7 +3,7 @@
 #' Observed hurricane track (lat, lon, timestamp) for center of storm Milton during 2024
 #'
 #' @format ## `data_milton`
-#' A data frame with 7,240 rows and 60 columns:
+#' A data frame with 62 rows and 7 columns:
 #' \describe{
 #'   \item{name}{Character - Storm name given by the agency}
 #'   \item{iso_time}{POSIXct - SO Time provided in Universal Time Coordinates (UTC). Format is YYYY-MM-DD HH:mm:ss Most points are provided at 6 hour intervals.}
@@ -29,124 +29,75 @@
 #' @source \url{https://www.ncei.noaa.gov/products/international-best-track-archive}
 "data_milton"
 
-#' World Health Organization TB data
+#' Lionfish biometry
 #'
 #' @description
-#' A subset of data from the World Health Organization Global Tuberculosis
-#' Report, and accompanying global populations. `who` uses the original
-#' codes from the World Health Organization. The column names for columns
-#' 5 through 60 are made by combining `new_` with:
+#' Biometric measurements for 109 lionfish (_Pterois volitans_) captured off
+#' Puerto Aventuras (Mexico). Data also include spatial and environmental variables.
 #'
-#' * the method of diagnosis (`rel` = relapse, `sn` = negative pulmonary
-#'   smear, `sp` = positive pulmonary smear, `ep` = extrapulmonary),
-#' * gender (`f` = female, `m` = male), and
-#' * age group (`014` = 0-14 yrs of age, `1524` = 15-24, `2534` = 25-34,
-#'   `3544` = 35-44 years of age, `4554` = 45-54, `5564` = 55-64,
-#'   `65` = 65 years or older).
 #'
-#' `who2` is a lightly modified version that makes teaching the basics
-#' easier by tweaking the variables to be slightly more consistent and
-#' dropping `iso2` and `iso3`. `newrel` is replaced by `new_rel`, and a
-#' `_` is added after the gender.
-#'
-#' @format ## `who`
-#' A data frame with 7,240 rows and 60 columns:
+#' @format ## `data_lionfish`
+#' A data frame with 109 rows and 8 columns:
 #' \describe{
-#'   \item{country}{Country name}
-#'   \item{iso2, iso3}{2 & 3 letter ISO country codes}
-#'   \item{year}{Year}
-#'   \item{new_sp_m014 - new_rel_f65}{Counts of new TB cases recorded by group.
-#'    Column names encode three variables that describe the group.}
+#'   \item{id}{Character - A unique alpha-numeric code identoifying each organism}
+#'   \item{site}{Character - Name of the dive site from which the organism was collected}
+#'   \item{lat}{Numeric - Latitude in decimal degrees}
+#'   \item{lon}{Numeric - Longitude in decimal degrees}
+#'   \item{total_length_mm}{Numeric - Total length of the organism, measured in milimiters}
+#'   \item{total_weight_gr}{Numeric - Total weight (also known as wet weight) of the organism, measured in milimiters}
+#'   \item{depth_m}{Numeric - Depth at which the organism was collected, in meters}
+#'   \item{temperature_C}{Numeric - Water temperature during time of collection, in °C}
 #' }
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
-"lionfish"
+#' @source Villaseñor-Derbez, J.C. & Herrera-Pérez, R. Brief description of prey
+#' selectivity and ontogenetic changes in the diet of the invasive lionfish
+#' _Pterois volitans_ (Actinopterygii, Scorpaenidae) in the Mexican Caribbean.
+#' Pan-American Journal of Aquatic Sciences. (2014), 9(2):131-135.
+"data_lionfish"
 
-#' Example tabular representations
+#' Apparent fishing effort in the Gulf of Mexico
 #'
-#' Data sets that demonstrate multiple ways to layout the same tabular data.
+#' @description
+#' Monthly AIS-derived dishing effort in the Gulf of Mexico during 2024
 #'
-#' `table1`, `table2`, `table3`, `table4a`, `table4b`,
-#' and `table5` all display the number of TB cases documented by the World
-#' Health Organization in Afghanistan, Brazil, and China between 1999 and 2000.
-#' The data contains values associated with four variables (country, year,
-#' cases, and population), but each table organizes the values in a different
-#' layout.
 #'
-#' The data is a subset of the data contained in the World Health
-#' Organization Global Tuberculosis Report
-#'
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
-#' @format NULL
-"scuba"
+#' @format ## `data_fishing_effort`
+#' A data frame with 14,038 rows and 6 columns:
+#' \describe{
+#'   \item{year}{Numeric - Year of the observation}
+#'   \item{month}{Numeric - Month of the observation}
+#'   \item{lat}{Numeric - Latitude in decimal degrees indicating the center of the pixel where activity took place}
+#'   \item{lon}{Numeric - Longitude in decimal degrees indicating the center of the pixel where activity took place}
+#'   \item{effort_vessels}{Numeric - Fishing effort measured in number of fishing vessels infered to be fishing at that location}
+#'   \item{temperature_C}{Numeric - Fishing effort measured in apparent fishing hours at that location}
+#' }
+#' @source Data were generated using the `gfwr` package
+#' \url{https://github.com/GlobalFishingWatch/gfwr}. See also Kroodsma
+#' et al. "Tracking the global footprint of fisheries." Science 359.6378 (2018):
+#' 904-908.
+"data_fishing_effort"
 
-#' Example tabular representations
+#' Sea Surface Temperature
 #'
-#' Data sets that demonstrate multiple ways to layout the same tabular data.
+#' @description
+#' Mean daily Sea Surface Temperature (°C) near Miami, FL
 #'
-#' `table1`, `table2`, `table3`, `table4a`, `table4b`,
-#' and `table5` all display the number of TB cases documented by the World
-#' Health Organization in Afghanistan, Brazil, and China between 1999 and 2000.
-#' The data contains values associated with four variables (country, year,
-#' cases, and population), but each table organizes the values in a different
-#' layout.
-#'
-#' The data is a subset of the data contained in the World Health
-#' Organization Global Tuberculosis Report
-#'
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
-#' @format NULL
-"transects"
+#' @format ## `data_sst`
+#' \describe{
+#'    \item{date}{Date - Date of the observation, in yyyy-mm-dd format}
+#'    \item{temperature_C}{Numeric - Mean sea surface temperatrure, measured in °C}
+#' }
+#' @examples
+#' library(EVR628tools)
+#' # Look at the first 10 rows
+#' head(data_sst, 10)
+#' # Make a time series plot
+#' ggplot(data = data_sst,
+#'        mapping = aes(x = date, y = temperature_C)) +
+#'        geom_line()
+"data_sst"
 
-#' Example tabular representations
-#'
-#' Data sets that demonstrate multiple ways to layout the same tabular data.
-#'
-#' `table1`, `table2`, `table3`, `table4a`, `table4b`,
-#' and `table5` all display the number of TB cases documented by the World
-#' Health Organization in Afghanistan, Brazil, and China between 1999 and 2000.
-#' The data contains values associated with four variables (country, year,
-#' cases, and population), but each table organizes the values in a different
-#' layout.
-#'
-#' The data is a subset of the data contained in the World Health
-#' Organization Global Tuberculosis Report
-#'
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
-#' @format NULL
-"abundance"
+#"scuba"
 
-#' Example tabular representations
-#'
-#' Data sets that demonstrate multiple ways to layout the same tabular data.
-#'
-#' `table1`, `table2`, `table3`, `table4a`, `table4b`,
-#' and `table5` all display the number of TB cases documented by the World
-#' Health Organization in Afghanistan, Brazil, and China between 1999 and 2000.
-#' The data contains values associated with four variables (country, year,
-#' cases, and population), but each table organizes the values in a different
-#' layout.
-#'
-#' The data is a subset of the data contained in the World Health
-#' Organization Global Tuberculosis Report
-#'
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
-#' @format NULL
-"vessel_tracks"
+#"transects"
 
-#' Example tabular representations
-#'
-#' Data sets that demonstrate multiple ways to layout the same tabular data.
-#'
-#' `table1`, `table2`, `table3`, `table4a`, `table4b`,
-#' and `table5` all display the number of TB cases documented by the World
-#' Health Organization in Afghanistan, Brazil, and China between 1999 and 2000.
-#' The data contains values associated with four variables (country, year,
-#' cases, and population), but each table organizes the values in a different
-#' layout.
-#'
-#' The data is a subset of the data contained in the World Health
-#' Organization Global Tuberculosis Report
-#'
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
-#' @format NULL
-"spillover"
+#"spillover"

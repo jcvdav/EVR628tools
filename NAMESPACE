@@ -2,4 +2,5 @@
 
 export(create_dirs)
 export(palette_IPCC_ssp)
+export(palette_IPCC_temp)
 export(palette_UM)

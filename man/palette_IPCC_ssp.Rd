@@ -2,9 +2,9 @@
 % Please edit documentation in R/palette_IPCC_ssp.R
 \name{palette_IPCC_ssp}
 \alias{palette_IPCC_ssp}
-\title{Color palette for the Shared Socio-economic Pathways (SSPs)}
+\title{IPCC color palette for SSPs}
 \source{
-Page 9 form the IPCC style gyide: \url{https://www.ipcc.ch/site/assets/uploads/2022/09/IPCC_AR6_WGI_VisualStyleGuide_2022.pdf}
+Page 9 form the IPCC style guide: \url{https://www.ipcc.ch/site/assets/uploads/2022/09/IPCC_AR6_WGI_VisualStyleGuide_2022.pdf}
 }
 \usage{
 palette_IPCC_ssp(
@@ -18,7 +18,7 @@ palette_IPCC_ssp(
 A NAMED vector containing pairs for SSP names and colors.
 }
 \description{
-Representative Concentration Pathways (RCPs) and Socio-economic Pathways (SSPs), as indicated by the IPCC AR6 WGI style guide
+Default colors for Shared Socio-economic Pathways (SSPs), as indicated by the IPCC AR6 WGI style guide
 }
 \examples{
 palette_IPCC_ssp(ssp = "SSP5-8.5")

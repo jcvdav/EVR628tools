@@ -6,7 +6,7 @@
 \title{Hurricane tracks for Milton (2024)}
 \format{
 ## `data_milton`
-A data frame with 7,240 rows and 60 columns:
+A data frame with 62 rows and 7 columns:
 \describe{
   \item{name}{Character - Storm name given by the agency}
   \item{iso_time}{POSIXct - SO Time provided in Universal Time Coordinates (UTC). Format is YYYY-MM-DD HH:mm:ss Most points are provided at 6 hour intervals.}
