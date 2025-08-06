@@ -32,7 +32,8 @@ OISST_sub_dl <- function(time_df) {
     longitude = c(-81,-79.75),
     fields = "sst"
   )$data |>
-    dplyr::mutate(time = as.Date(stringr::str_remove(time, "T00:00:00Z")))
+    dplyr::mutate(time = as.Date(stringr::str_remove(time, "T00:00:00Z"))) |>
+    tidyr::drop_na()
 
   return(OISST_dat)
 }
@@ -48,10 +49,25 @@ dl_years <- dplyr::tibble(
           "2021-12-31",
           "2024-12-31"))
 
-data_sst <- dl_years |>
+# Get daily gridded data
+full_data <- dl_years |>
   split(dl_years$start) |>
   purrr::map_dfr(OISST_sub_dl) |>
-  dplyr::rename() |>
-  dplyr::select(longitude, latitude, date = t, temperature_C = temp)
+  dplyr::rename(date = time, temperature_C = sst)
 
+# Build daily SST data
+data_sst <- full_data |>
+  dplyr::group_by(date) |>
+  dplyr::summarize(temperature_C = mean(temperature_C, na.rm = T),
+            .groups = "drop")
+
+data_sst_anom <- full_data |>
+  dplyr::group_by(latitude, longitude) |>
+  dplyr::summarize(temperature_anomaly_C = mean(temperature_C[lubridate::year(date) == 2024], na.rm = T) - mean(temperature_C[!lubridate::year(date) == 2024], na.rm = T),
+                   .groups = "drop") |>
+  dplyr::rename(lat = latitude,
+                lon = longitude)
+
+# Export -----------------------------------------------------------------------
 usethis::use_data(data_sst, overwrite = TRUE)
+usethis::use_data(data_sst_anom, overwrite = TRUE)

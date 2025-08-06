@@ -79,13 +79,17 @@
 #' Sea Surface Temperature
 #'
 #' @description
-#' Mean daily Sea Surface Temperature (°C) near Miami, FL
+#' Mean daily Sea Surface Temperature (°C) derived from 0.5° resolution imagery
+#' within bounding box (lon_min = -81, lon_max = -79.75, lat_min = 25.25,
+#' lat_max = 25.75).
 #'
 #' @format ## `data_sst`
 #' \describe{
 #'    \item{date}{Date - Date of the observation, in yyyy-mm-dd format}
 #'    \item{temperature_C}{Numeric - Mean sea surface temperatrure, measured in °C}
 #' }
+#'
+#' @source Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}. The script to generate the data is \url(https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R)
 #' @examples
 #' library(EVR628tools)
 #' # Look at the first 10 rows
@@ -95,6 +99,32 @@
 #'        mapping = aes(x = date, y = temperature_C)) +
 #'        geom_line()
 "data_sst"
+
+
+#' Sea Surface Temperature Anomaly
+#'
+#' @description
+#' Sea Surface Temperature (°C) derived from 0.5° resolution imagery
+#' within bounding box (lon_min = -81, lon_max = -79.75, lat_min = 25.25,
+#' lat_max = 25.75) for 2024, relative to 2000-2023 values.
+#'
+#' @format ## `data_sst_anom`
+#' \describe{
+#'   \item{lat}{Numeric - Latitude in decimal degrees indicating the center of the pixel}
+#'   \item{lon}{Numeric - Longitude in decimal degrees indicating the center of the pixel}
+#'   \item{temperature_anomaly_C}{Numeric - Sea surface temperatrure anomaly relative to daily 2000-2023 values, measured in °C}
+#' }
+#'
+#' @source Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}. The script to generate the data is \url(https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R)
+#' @examples
+#' library(EVR628tools)
+#' # Look at the first 10 rows
+#' head(data_sst, 10)
+#' # Make a time series plot
+#' ggplot(data = data_sst,
+#'        mapping = aes(x = date, y = temperature_C)) +
+#'        geom_line()
+"data_sst_anom"
 
 #"scuba"
 
