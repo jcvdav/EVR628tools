@@ -48,7 +48,8 @@ lat_max = 25.75).</p>
 
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
-    <p>## `data_sst`</p><dl><dt>date</dt>
+    <p>## `data_sst`
+A data frame with 2,922 rows and two columns:</p><dl><dt>date</dt>
 <dd><p>Date - Date of the observation, in yyyy-mm-dd format</p></dd>
 
    <dt>temperature_C</dt>
@@ -58,12 +59,14 @@ lat_max = 25.75).</p>
 </dl></div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p>Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST <a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html" class="external-link">https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html</a>. The script to generate the data is (https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R)</p>
+    <p>Raw data come from NOAA AVHRR Optimum Interpolation v2.1 - SST
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html" class="external-link">https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html</a>.
+The script to generate the data is <a href="https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R" class="external-link">https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R</a></p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jcvdav.github.io/EVR628tools/">EVR628tools</a></span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># Look at the first 10 rows</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data_sst</span>, <span class="fl">10</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 2</span></span>
@@ -80,10 +83,10 @@ lat_max = 25.75).</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 2000-01-09          25.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 2000-01-10          25.7</span>
 <span class="r-in"><span><span class="co"># Make a time series plot</span></span></span>
-<span class="r-in"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">data_sst</span>,</span></span>
-<span class="r-in"><span>       mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">temperature_C</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>       <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in ggplot(data = data_sst, mapping = aes(x = date, y = temperature_C)):</span> could not find function "ggplot"</span>
+<span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">EVR628tools</span><span class="fu">::</span><span class="va">data_sst</span>,</span></span>
+<span class="r-in"><span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">temperature_C</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>       <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="data_sst-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
