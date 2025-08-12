@@ -31,6 +31,7 @@ palette_IPCC_temp <- function(){
     ipcc_temp <- grDevices::rgb(red = ipcc_temp$R,
                                 green = ipcc_temp$G,
                                 blue = ipcc_temp$B,
-                                maxColorValue = 256)
+                                maxColorValue = 256) |>
+      rev()
     return(ipcc_temp)
 }
