@@ -18,7 +18,7 @@ palette_IPCC <- function(var = "temp", type = "div"){
     stop('The value of `var` must be one of: "temp", "prec", "wind", or "cryo"')
   }
 
-  if(!ype %in% c("div", "seq")) {
+  if(!type %in% c("div", "seq")) {
     stop('The value of `type` must be one of: "div", or "seq"')
   }
 
