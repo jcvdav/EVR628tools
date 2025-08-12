@@ -1,5 +1,5 @@
 #' IPCC color palette for Sea Surface Temperature
-#'#' @description
+#' @description
 #' Default colors for Sea Surface Temperature, as indicated by the IPCC AR6 WGI style guide, when using a divergent color palette
 #'
 #'

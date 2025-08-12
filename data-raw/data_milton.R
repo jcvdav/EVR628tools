@@ -21,7 +21,8 @@ data_milton <- readr::read_csv("https://www.ncei.noaa.gov/data/international-bes
                                skip = 2) |>
   dplyr::filter(NAME == "MILTON") |>
   dplyr::select(name = NAME, iso_time = ISO_TIME, lat = LAT, lon = LON,
-         wind_speed = USA_WIND, pressure = USA_PRES, sshs = USA_SSHS)
+         wind_speed = USA_WIND, pressure = USA_PRES, sshs = USA_SSHS) |>
+  dplyr::mutate(sshs = as.character(sshs))
 
 # Export
 usethis::use_data(data_milton, overwrite = TRUE)

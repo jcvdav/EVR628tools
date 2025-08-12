@@ -11,7 +11,7 @@
 #'   \item{lon}{Numeric - Longitude in decimal degrees}
 #'   \item{wind_speed}{Numeric - Maximum sustained wind speed in knots: 0 - 300 kts. (1-min. mean)}
 #'   \item{pressure}{Numeric - Minimum sea level pressure, 850 - 1050 mb.}
-#'   \item{sshs}{Numeric - Saffir–Simpson hurricane scale. The values are defined as follows:
+#'   \item{sshs}{Character - Saffir–Simpson hurricane scale. The values are defined as follows:
 #'   -5 = Unknown
 #'   -4 = Post-tropical
 #'   -3 = Miscellaneous disturbances
@@ -94,6 +94,7 @@
 #' \url{https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg_LonPM180.html}.
 #' The script to generate the data is \url{https://github.com/jcvdav/EVR628tools/blob/main/data-raw/data_sst.R}
 #' @examples
+#' library(EVR628tools)
 #' library(ggplot2)
 #' # Look at the first 10 rows
 #' head(data_sst, 10)

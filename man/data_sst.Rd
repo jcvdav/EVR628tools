@@ -26,6 +26,7 @@ within bounding box (lon_min = -81, lon_max = -79.75, lat_min = 25.25,
 lat_max = 25.75).
 }
 \examples{
+library(EVR628tools)
 library(ggplot2)
 # Look at the first 10 rows
 head(data_sst, 10)

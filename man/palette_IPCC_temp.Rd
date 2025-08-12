@@ -2,9 +2,7 @@
 % Please edit documentation in R/palette_IPCC_temp.R
 \name{palette_IPCC_temp}
 \alias{palette_IPCC_temp}
-\title{IPCC color palette for Sea Surface Temperature
-#' @description
-Default colors for Sea Surface Temperature, as indicated by the IPCC AR6 WGI style guide, when using a divergent color palette}
+\title{IPCC color palette for Sea Surface Temperature}
 \source{
 Page 8 of the 2019 ICPP Style guide: \url{https://www.ipcc.ch/site/assets/uploads/2019/04/IPCC-visual-style-guide.pdf}
 
@@ -17,8 +15,6 @@ palette_IPCC_temp()
 A character vector containing 11 colors,
 }
 \description{
-IPCC color palette for Sea Surface Temperature
-#' @description
 Default colors for Sea Surface Temperature, as indicated by the IPCC AR6 WGI style guide, when using a divergent color palette
 }
 \examples{
