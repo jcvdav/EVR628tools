@@ -72,17 +72,17 @@ The script to generate the data is <a href="https://github.com/jcvdav/EVR628tool
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Look at the first 10 rows</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">EVR628tools</span><span class="fu">::</span><span class="va">data_sst_anom</span>, <span class="fl">10</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 9 × 3</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    latitude longitude mean_2024_temperature_C</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span>                   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>      25.4     -<span style="color: #BB0000;">80.1</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span>      25.4     -<span style="color: #BB0000;">79.9</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span>      25.4     -<span style="color: #BB0000;">79.6</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span>      25.6     -<span style="color: #BB0000;">80.1</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span>      25.6     -<span style="color: #BB0000;">79.9</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span>      25.6     -<span style="color: #BB0000;">79.6</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span>      25.9     -<span style="color: #BB0000;">80.1</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">8</span>      25.9     -<span style="color: #BB0000;">79.9</span>                     <span style="color: #BB0000;">NaN</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">9</span>      25.9     -<span style="color: #BB0000;">79.6</span>                     <span style="color: #BB0000;">NaN</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         lat       lon temperature_anomaly_C</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>      25.4     -<span style="color: #BB0000;">80.1</span>                 0.260</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span>      25.4     -<span style="color: #BB0000;">79.9</span>                 0.484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span>      25.4     -<span style="color: #BB0000;">79.6</span>                 0.636</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span>      25.6     -<span style="color: #BB0000;">80.1</span>                 0.202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span>      25.6     -<span style="color: #BB0000;">79.9</span>                 0.479</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span>      25.6     -<span style="color: #BB0000;">79.6</span>                 0.637</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span>      25.9     -<span style="color: #BB0000;">80.1</span>                 0.238</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">8</span>      25.9     -<span style="color: #BB0000;">79.9</span>                 0.493</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">9</span>      25.9     -<span style="color: #BB0000;">79.6</span>                 0.646</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
