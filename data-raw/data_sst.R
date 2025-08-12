@@ -61,6 +61,7 @@ data_sst <- full_data |>
   dplyr::summarize(temperature_C = mean(temperature_C, na.rm = T),
             .groups = "drop")
 
+# Build SST anomaly
 data_sst_anom <- full_data |>
   dplyr::group_by(latitude, longitude) |>
   dplyr::summarize(temperature_anomaly_C = mean(temperature_C[lubridate::year(date) == 2024], na.rm = T) - mean(temperature_C[!lubridate::year(date) == 2024], na.rm = T),
