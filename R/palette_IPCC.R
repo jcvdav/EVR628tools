@@ -22,16 +22,14 @@ palette_IPCC <- function(var = "temp", type = "div"){
     stop('The value of `type` must be one of: "div", or "seq"')
   }
 
-  load("R/sysdata.rda")
-
-  colors <- dplyr::case_when(var == "temp" & type == "div" ~ temp_div,
-                             var == "temp" & type == "seq" ~ temp_seq,
-                             var == "prec" & type == "div" ~ prec_div,
-                             var == "prec" & type == "seq" ~ prec_seq,
-                             var == "wind" & type == "div" ~ wind_div,
-                             var == "wind" & type == "seq" ~ wind_seq,
-                             var == "cryo" & type == "div" ~ cryo_div,
-                             var == "cryo" & type == "seq" ~ cryo_seq)
+  colors <- dplyr::case_when(var == "temp" & type == "div" ~ EVR628tools:::temp_div,
+                             var == "temp" & type == "seq" ~ EVR628tools:::temp_seq,
+                             var == "prec" & type == "div" ~ EVR628tools:::prec_div,
+                             var == "prec" & type == "seq" ~ EVR628tools:::prec_seq,
+                             var == "wind" & type == "div" ~ EVR628tools:::wind_div,
+                             var == "wind" & type == "seq" ~ EVR628tools:::wind_seq,
+                             var == "cryo" & type == "div" ~ EVR628tools:::cryo_div,
+                             var == "cryo" & type == "seq" ~ EVR628tools:::cryo_seq)
 
   return(colors)
 }
