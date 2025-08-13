@@ -20,9 +20,9 @@ create_dirs <- function(other_dirs = NULL){
 
   standard_dirs <- c("scripts",
                      "data",
-                        "raw",
-                        "processed",
-                        "output",
+                        "data/raw",
+                        "data/processed",
+                        "data/output",
                      "results",
                         "results/img",
                         "results/tab")
