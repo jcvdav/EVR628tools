@@ -14,6 +14,7 @@ A data frame with 109 rows and 8 columns:
   \item{lon}{Numeric - Longitude in decimal degrees}
   \item{total_length_mm}{Numeric - Total length of the organism, measured in milimiters}
   \item{total_weight_gr}{Numeric - Total weight (also known as wet weight) of the organism, measured in milimiters}
+  \item{size_class}{Character - Size class specifying whether the fish was small (< 100 mm), medium (100 - 200 mm) or large (> 300 mm)}
   \item{depth_m}{Numeric - Depth at which the organism was collected, in meters}
   \item{temperature_C}{Numeric - Water temperature during time of collection, in °C}
 }
