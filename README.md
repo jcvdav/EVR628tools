@@ -1,12 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# EVR628tools
+# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="138"/></a>
 
 <!-- badges: start -->
 
-[![Codecov test
-coverage](https://codecov.io/gh/jcvdav/EVR628tools/graph/badge.svg)](https://app.codecov.io/gh/jcvdav/EVR628tools)
+[![R-CMD-check](https://github.com/jcvdav/EVR628tools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jcvdav/EVR628tools/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 `EVR628tools` contains a series of datasets, palettes, and functions to
@@ -41,15 +40,16 @@ library(ggplot2)
 
 # First, inspect the data
 head(EVR628tools::data_lionfish)
-#> # A tibble: 6 × 8
-#>   id     site    lat   lon total_length_mm total_weight_gr depth_m temperature_C
-#>   <chr>  <chr> <dbl> <dbl>           <dbl>           <dbl>   <dbl>         <dbl>
-#> 1 001-P… Para…  20.5 -87.2             213           113.     38.1            28
-#> 2 002-P… Para…  20.5 -87.2             124            27.6    27.9            28
-#> 3 003-P… Pared  20.5 -87.2             166            52.3    18.5            28
-#> 4 004-C… Cano…  20.5 -87.2             203           123.     15.5            28
-#> 5 005-C… Cano…  20.5 -87.2             212           129      15              28
-#> 6 006-P… Paam…  20.5 -87.2             210           139.     22.7            29
+#> # A tibble: 6 × 9
+#>   id        site    lat   lon total_length_mm total_weight_gr size_class depth_m
+#>   <chr>     <chr> <dbl> <dbl>           <dbl>           <dbl> <chr>        <dbl>
+#> 1 001-Po-1… Para…  20.5 -87.2             213           113.  large         38.1
+#> 2 002-Po-2… Para…  20.5 -87.2             124            27.6 medium        27.9
+#> 3 003-Pd-2… Pared  20.5 -87.2             166            52.3 medium        18.5
+#> 4 004-Cs-1… Cano…  20.5 -87.2             203           123.  large         15.5
+#> 5 005-Cs-1… Cano…  20.5 -87.2             212           129   large         15  
+#> 6 006-Pl-2… Paam…  20.5 -87.2             210           139.  large         22.7
+#> # ℹ 1 more variable: temperature_C <dbl>
 
 # Now let's build a plot
 ggplot(data = EVR628tools::data_lionfish,
