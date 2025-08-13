@@ -45,7 +45,8 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="evr628tools">EVR628tools<a class="anchor" aria-label="anchor" href="#evr628tools"></a>
+<div class="page-header"><h1 id="evr628tools-">EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="reference/figures/hexsticker.png" align="right" height="138"></a>
+<a class="anchor" aria-label="anchor" href="#evr628tools-"></a>
 </h1></div>
 <!-- badges: start -->
 
@@ -66,15 +67,16 @@
 <span></span>
 <span><span class="co"># First, inspect the data</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">EVR628tools</span><span class="fu">::</span><span class="va"><a href="reference/data_lionfish.html">data_lionfish</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 6 × 8</span></span>
-<span><span class="co">#&gt;   id     site    lat   lon total_length_mm total_weight_gr depth_m temperature_C</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;   &lt;dbl&gt;         &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1 001-P… Para…  20.5 -87.2             213           113.     38.1            28</span></span>
-<span><span class="co">#&gt; 2 002-P… Para…  20.5 -87.2             124            27.6    27.9            28</span></span>
-<span><span class="co">#&gt; 3 003-P… Pared  20.5 -87.2             166            52.3    18.5            28</span></span>
-<span><span class="co">#&gt; 4 004-C… Cano…  20.5 -87.2             203           123.     15.5            28</span></span>
-<span><span class="co">#&gt; 5 005-C… Cano…  20.5 -87.2             212           129      15              28</span></span>
-<span><span class="co">#&gt; 6 006-P… Paam…  20.5 -87.2             210           139.     22.7            29</span></span>
+<span><span class="co">#&gt; # A tibble: 6 × 9</span></span>
+<span><span class="co">#&gt;   id        site    lat   lon total_length_mm total_weight_gr size_class depth_m</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 001-Po-1… Para…  20.5 -87.2             213           113.  large         38.1</span></span>
+<span><span class="co">#&gt; 2 002-Po-2… Para…  20.5 -87.2             124            27.6 medium        27.9</span></span>
+<span><span class="co">#&gt; 3 003-Pd-2… Pared  20.5 -87.2             166            52.3 medium        18.5</span></span>
+<span><span class="co">#&gt; 4 004-Cs-1… Cano…  20.5 -87.2             203           123.  large         15.5</span></span>
+<span><span class="co">#&gt; 5 005-Cs-1… Cano…  20.5 -87.2             212           129   large         15  </span></span>
+<span><span class="co">#&gt; 6 006-Pl-2… Paam…  20.5 -87.2             210           139.  large         22.7</span></span>
+<span><span class="co">#&gt; # ℹ 1 more variable: temperature_C &lt;dbl&gt;</span></span>
 <span></span>
 <span><span class="co"># Now let's build a plot</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">EVR628tools</span><span class="fu">::</span><span class="va"><a href="reference/data_lionfish.html">data_lionfish</a></span>,</span>
@@ -122,7 +124,7 @@ Sample figure using data and color palettes from the <code>EVR628tools</code> pa
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://app.codecov.io/gh/jcvdav/EVR628tools" class="external-link"><img src="https://codecov.io/gh/jcvdav/EVR628tools/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/jcvdav/EVR628tools/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/jcvdav/EVR628tools/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
