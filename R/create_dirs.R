@@ -1,6 +1,6 @@
 #' Create standard project directories
 #'
-#' @description Creates a set of standard directories in the repository: scripts, data (and subdirectories for raw, processed, and output) results (and subdirectories for img and tab)
+#' @description Creates a set of standard directories in the repository: scripts, data, results and the main subdirectories
 #'
 #' @param other_dirs If needed, a character vector containing the names for extra directories.
 #'
@@ -19,6 +19,9 @@
 create_dirs <- function(other_dirs = NULL){
 
   standard_dirs <- c("scripts",
+                        "scripts/01_processing",
+                        "scripts/02_analysis",
+                        "scripts/03_content",
                      "data",
                         "data/raw",
                         "data/processed",
@@ -26,6 +29,7 @@ create_dirs <- function(other_dirs = NULL){
                      "results",
                         "results/img",
                         "results/tab")
+
   sapply(standard_dirs, dir.create)
 
   if(!is.null(other_dirs)){

@@ -13,7 +13,7 @@ create_dirs(other_dirs = NULL)
 \item{other_dirs}{If needed, a character vector containing the names for extra directories.}
 }
 \description{
-Creates a set of standard directories in the repository: scripts, data (and subdirectories for raw, processed, and output) results (and subdirectories for img and tab)
+Creates a set of standard directories in the repository: scripts, data, results and the main subdirectories
 }
 \examples{
 
