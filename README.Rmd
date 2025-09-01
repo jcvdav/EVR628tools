@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="60"/></a>
+# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="120px"/></a>
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/jcvdav/EVR628tools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jcvdav/EVR628tools/actions/workflows/R-CMD-check.yaml)
@@ -33,7 +33,7 @@ pak::pak("jcvdav/EVR628tools")
 
 ## Example
 
-The package contains functions with the preface `data_*` and `palette_*`. The following example uses one of each. Take a look at the [Reference](./refrence/index.html) to see a full list of datasts and functions available. The task at hand is simple. We'll use the `EVR628tools::data_lionfish` data to make a plot showing how fish size (length and weight) varies by depth using a scatterplot. We'll use the `EVR628tools::palette_UM()` color palette to color our points by site. I recommend that you look at the documentation of the data `?EVR628tools::data_lionfish` and the color palette `EVR628tools::palette_UM()` before running the code.
+The package contains functions with the preface `data_*` and `palette_*`. The following example uses one of each. Take a look at the [Reference](./reference/index.html) to see a full list of datasets and functions available. The task at hand is simple. We'll use the `EVR628tools::data_lionfish` data to make a plot showing how fish size (length and weight) varies by depth using a scatterplot. We'll use the `EVR628tools::palette_UM()` color palette to color our points by site. I recommend that you look at the documentation of the data `?EVR628tools::data_lionfish` and the color palette `EVR628tools::palette_UM()` before running the code.
 
 ```{r example}
 #| fig-width: 8

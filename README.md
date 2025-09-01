@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="60"/></a>
+# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="120px"/></a>
 
 <!-- badges: start -->
 
@@ -26,7 +26,7 @@ pak::pak("jcvdav/EVR628tools")
 
 The package contains functions with the preface `data_*` and
 `palette_*`. The following example uses one of each. Take a look at the
-[Reference](./refrence/index.html) to see a full list of datasts and
+[Reference](./reference/index.html) to see a full list of datasets and
 functions available. The task at hand is simple. We’ll use the
 `EVR628tools::data_lionfish` data to make a plot showing how fish size
 (length and weight) varies by depth using a scatterplot. We’ll use the
