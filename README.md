@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="138"/></a>
+# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="60"/></a>
 
 <!-- badges: start -->
 
@@ -19,7 +19,7 @@ You can install the development version of EVR628tools like so:
 
 ``` r
 # install.packages("pak") #In case you don't have pak installed
-pak::pak("jcvdav/EVR628tools)
+pak::pak("jcvdav/EVR628tools")
 ```
 
 ## Example
