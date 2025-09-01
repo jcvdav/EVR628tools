@@ -1,7 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# EVR628tools <a href="https://jcvdav.github.io/EVR628tools/index.html"><img src="man/figures/hexsticker.png" align="right" height="120px"/></a>
+<img width="120px" align="right" src="man/figures/hexsticker.png">
+
+# EVR628tools
 
 <!-- badges: start -->
 
