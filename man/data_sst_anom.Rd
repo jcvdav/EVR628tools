@@ -6,7 +6,7 @@
 \title{Sea Surface Temperature Anomaly}
 \format{
 ## `data_sst_anom`
-A data.frame with 9 rowns and two columns:
+A data.frame with 9 rows and two columns:
 \describe{
   \item{lat}{Numeric - Latitude in decimal degrees indicating the center of the pixel}
   \item{lon}{Numeric - Longitude in decimal degrees indicating the center of the pixel}

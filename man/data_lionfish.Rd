@@ -6,7 +6,7 @@
 \title{Lionfish biometry}
 \format{
 ## `data_lionfish`
-A data frame with 109 rows and 8 columns:
+A data frame with 109 rows and 9 columns:
 \describe{
   \item{id}{Character - A unique alpha-numeric code identoifying each organism}
   \item{site}{Character - Name of the dive site from which the organism was collected}
