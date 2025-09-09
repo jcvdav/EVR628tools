@@ -19,6 +19,7 @@ Depends:
     R (>= 3.5)
 Suggests: 
     dplyr,
+    tidyr,
     ggplot2,
     cli,
     rlang

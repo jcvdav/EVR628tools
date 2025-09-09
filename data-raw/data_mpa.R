@@ -23,16 +23,16 @@ data_MPA <- tidyr::expand_grid(time = -5:4,
 mpa <- readRDS(url("https://github.com/jcvdav/LSMPA_spillover/raw/refs/heads/main/data/processed/annual_relevant_mpa_gears_estimation_panel.rds"))
 data_PIPA <- mpa |>
   dplyr::filter(gear == "purse_seine",
-         name == "Phoenix Islands Protected Area",
-         dplyr::between(event, -5, 4)) |>
+                name == "Phoenix Islands Protected Area",
+                dplyr::between(event, -5, 4)) |>
   dplyr::group_by(lat, lon, year, post, near_100, event) |>
   dplyr::summarize(effort = sum(effort),
-            tot_mt = sum(tot_mt),
-            .groups = "drop") |>
+                   tot_mt = sum(tot_mt),
+                   .groups = "drop") |>
   dplyr::mutate(post = post == 1,
-         near = near_100 == 1,
-         cpue = tot_mt / effort,
-         id = paste(lat, lon)) |>
+                near = near_100 == 1,
+                cpue = tot_mt / effort,
+                id = paste(lat, lon)) |>
   dplyr::select(year, lat, lon, near, post, cpue)
 
 # Export both objects
