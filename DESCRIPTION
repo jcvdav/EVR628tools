@@ -19,4 +19,5 @@ Depends:
     R (>= 3.5)
 Suggests: 
     dplyr,
-    ggplot2
+    ggplot2,
+    cli
