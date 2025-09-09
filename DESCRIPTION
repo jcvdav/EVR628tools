@@ -20,4 +20,5 @@ Depends:
 Suggests: 
     dplyr,
     ggplot2,
-    cli
+    cli,
+    rlang

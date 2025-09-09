@@ -162,8 +162,8 @@
 #' \describe{
 #'    \item{fishery}{Character - Specifies the fishery (lobster, sea_cucumber, or urchin)}
 #'    \item{eu_rnpa}{Character - A 10-digit unique identifier for each economic unit}
-#'    \item{catch_kg}{Numeric - Kilograms of seafood extracted, in Kilograms}
-#'    \item{revenue_mxn}{Numeric - Revenue generated from selling the catch, in MXN}
+#'    \item{catch}{Numeric - Fisherie sproduction, in Metric tons}
+#'    \item{revenue}{Numeric - Revenue generated from selling the catch, in thousands of MXN}
 #' }
 #'
 #' @source Data are oroginally reported by CONAPESCA (Mexico's fishery management agency)
