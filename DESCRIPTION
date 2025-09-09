@@ -18,9 +18,9 @@ URL: https://jcvdav.github.io/EVR628tools/
 Depends: 
     R (>= 3.5)
 Imports: 
-    cli (>= 3.6.1)
+    cli (>= 3.6.1),
+    rlang (>= 1.1.1)
 Suggests: 
     dplyr,
     tidyr,
-    ggplot2,
-    rlang
+    ggplot2
