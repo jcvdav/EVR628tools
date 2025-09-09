@@ -173,11 +173,44 @@
 #' Commun Earth Environ 5, 623 (2024). \url{https://doi.org/10.1038/s43247-024-01696-x}
 "data_fishing"
 
+#' SIMULATED biomass inside and outside a Marine Protected Area
+#'
+#' Panel data with \bold{SIMULATED} biomass data from inside and
+#' outside a Marine Protected Area. The average treatment effect is 2, but noise
+#' has been introuced to the data.
+#'
+#' @description
+#' A data.frame with 100 rows and 5 columns:
+#' \describe{
+#'    \item{time}{Numeric - Number of year until / since the the intervention takes place}
+#'    \item{id}{Character - Unique site identifier (letters a:j)}
+#'    \item{protected}{Logical - `TRUE`, indicates the observation comes from inside the MPA }
+#'    \item{after}{Logical - `TRUE` indicates the observation comes from the period after the intervention took place}
+#'    \item{biomass}{Numeric - \bold{SIMULATED} biomass data, in Kg}
+#' }
+#' @source This data are \bold{SIMULATED}. For instructional purposes only.
+"data_MPA"
+
+#' CPUE near and far the Phoenix Islands Protected Area
+#'
+#' Panel data with CPUE data from near and far from the boundaries of the
+#' Phoenix Islands Protected Area.
+#'
+#' @description
+#' A data.frame with 663 rows and 6 columns:
+#' \describe{
+#'    \item{time}{Numeric - Number of year until / since the the intervention takes place}
+#'    \item{lat}{Numeric - Latitude indicating centroid of the grid cell}
+#'    \item{lon}{Numeric - Longitude indicating centroid of the grid cell}
+#'    \item{near}{Logical - `TRUE`, indicates the observation comes from inside the MPA }
+#'    \item{post}{Logical - `TRUE` indicates the observation comes from the period after the intervention took place}
+#'    \item{cpue}{Numeric - Catch-per-unit-effort meassured in metric tons per fishing set}
+#' }
+"data_PIPA"
+
 #"scuba"
 
 #"transects"
-
-#"spillover"
 
 # "vessel tracks"
 
