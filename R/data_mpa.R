@@ -12,9 +12,9 @@
 set.seed(1)
 data_MPA <- tidyr::expand_grid(time = -5:4,
                                id = 1:10) |>
-  dplyr::mutate(protected = id <= 5,
+  dplyr::mutate(protected = 1 * (id <= 5),
                 b = 10 + rnorm(id),
-                after = time >= 0,
+                after = 1 * (time >= 0),
                 biomass = b + (after * protected) * 2,
                 id = letters[id]) |>
   dplyr::select(time, id, protected, after, biomass)
@@ -38,3 +38,4 @@ data_PIPA <- mpa |>
 # Export both objects
 usethis::use_data(data_MPA, overwrite = TRUE)
 usethis::use_data(data_PIPA, overwrite = TRUE)
+

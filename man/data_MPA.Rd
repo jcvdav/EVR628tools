@@ -18,8 +18,8 @@ A data.frame with 100 rows and 5 columns:
 \describe{
    \item{time}{Numeric - Number of year until / since the the intervention takes place}
    \item{id}{Character - Unique site identifier (letters a:j)}
-   \item{protected}{Logical - `TRUE`, indicates the observation comes from inside the MPA }
-   \item{after}{Logical - `TRUE` indicates the observation comes from the period after the intervention took place}
+   \item{protected}{Numeric - A value of 1, indicates the observation comes from inside the MPA }
+   \item{after}{Numeric - A value of 1 indicates the observation comes from the period after the intervention took place}
    \item{biomass}{Numeric - \bold{SIMULATED} biomass data, in Kg}
 }
 }
