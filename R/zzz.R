@@ -1,6 +1,12 @@
 .onAttach <- function(...) {
 
-  msg <- paste0(cli::col_blue("You have sucessfully loaded the EVR628tools package"))
+  msg <- paste(cli::col_green(cli::symbol$tick),
+               cli::col_green(cli::symbol$tick),
+               cli::col_green(cli::symbol$tick),
+               cli::col_blue("You sucessfully loaded the EVR628tools package"),
+               cli::col_green(cli::symbol$tick),
+               cli::col_green(cli::symbol$tick),
+               cli::col_green(cli::symbol$tick))
   rlang::inform(message = msg, class = "packageStartupMessage")
 
 }
