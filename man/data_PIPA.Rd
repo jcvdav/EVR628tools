@@ -3,7 +3,7 @@
 \docType{data}
 \name{data_PIPA}
 \alias{data_PIPA}
-\title{CPUE near and far the Phoenix Islands Protected Area}
+\title{CPUE near and far the Phoenix Islands Protected Area in Kiribati}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 663 rows and 6 columns.
 }
