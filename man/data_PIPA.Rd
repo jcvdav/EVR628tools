@@ -13,11 +13,11 @@ data_PIPA
 \description{
 A data.frame with 663 rows and 6 columns:
 \describe{
-   \item{time}{Numeric - Number of year until / since the the intervention takes place}
+   \item{year}{Numeric - Number of year until / since the the intervention takes place}
    \item{lat}{Numeric - Latitude indicating centroid of the grid cell}
    \item{lon}{Numeric - Longitude indicating centroid of the grid cell}
-   \item{near}{Logical - `TRUE`, indicates the observation comes from inside the MPA }
-   \item{post}{Logical - `TRUE` indicates the observation comes from the period after the intervention took place}
+   \item{period}{Character - indicates whether the observation comes from near (within 100 nautical miles) or far (between 100 and 200 nautical miles) from the MPA }
+   \item{distance}{Characger - indicates whether the observation comes before or after the intervention took place}
    \item{cpue}{Numeric - Catch-per-unit-effort meassured in metric tons per fishing set}
 }
 }

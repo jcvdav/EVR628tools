@@ -29,11 +29,11 @@ data_PIPA <- mpa |>
   dplyr::summarize(effort = sum(effort),
                    tot_mt = sum(tot_mt),
                    .groups = "drop") |>
-  dplyr::mutate(post = post == 1,
-                near = near_100 == 1,
+  dplyr::mutate(period = ifelse(post == 1, "after", "before"),
+                distance = ifelse(near_100 == 1, "near", "far"),
                 cpue = tot_mt / effort,
                 id = paste(lat, lon)) |>
-  dplyr::select(year, lat, lon, near, post, cpue)
+  dplyr::select(year, lat, lon, period, distance, cpue)
 
 # Export both objects
 usethis::use_data(data_MPA, overwrite = TRUE)
