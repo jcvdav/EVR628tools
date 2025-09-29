@@ -20,17 +20,16 @@ transect_data_raw <- readr::read_csv("https://github.com/jcvdav/KelpForest/raw/r
 data_kelp <- transect_data_raw |>
   dplyr::filter(year == max(year),
                 level == "Fondo") |>
-  dplyr::pivot_wider(names_from = total_length,
+  tidyr::pivot_wider(names_from = total_length,
                      values_from = abundance,
-              values_fill = 0,
-              names_prefix = "TL_") |>
+                     names_prefix = "TL_") |>
   dplyr::mutate(TL_70 = 0,
-         site = ifelse(site == "Norte", "North", "South")) |>
+                site = ifelse(site == "Norte", "North", "South")) |>
   dplyr::select(location, site, transect, genus_species,
-         TL_5, TL_10, TL_15, TL_20, TL_25, TL_30,
-         TL_35, TL_40, TL_45, TL_50, TL_55, TL_60,
-         TL_65, TL_70, TL_75, TL_80, TL_85, TL_90,
-         TL_95, TL_100, TL_105) |>
+                TL_5, TL_10, TL_15, TL_20, TL_25, TL_30,
+                TL_35, TL_40, TL_45, TL_50, TL_55, TL_60,
+                TL_65, TL_70, TL_75, TL_80, TL_85, TL_90,
+                TL_95, TL_100, TL_105) |>
   dplyr::distinct()
 
 # EXPORT #######################################################################
