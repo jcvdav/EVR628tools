@@ -23,7 +23,7 @@ data_kelp <- transect_data_raw |>
   tidyr::pivot_wider(names_from = total_length,
                      values_from = abundance,
                      names_prefix = "TL_") |>
-  dplyr::mutate(TL_70 = 0,
+  dplyr::mutate(TL_70 = NA,
                 site = ifelse(site == "Norte", "North", "South")) |>
   dplyr::select(location, site, transect, genus_species,
                 TL_5, TL_10, TL_15, TL_20, TL_25, TL_30,
