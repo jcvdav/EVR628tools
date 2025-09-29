@@ -155,18 +155,19 @@
 
 #' Fisheries production and revenues
 #' Information in fisheries production and revenues for 41 economic units
-#' targeting 3 species in the Baja California Peninsula during 2021
+#' targeting 3 species in the Baja California Peninsula between 2000 and 2021
 #'
 #' @description
-#' A data.frame with 51 rows and 4 columns:
+#' A data.frame with 1051 rows and 5 columns:
 #' \describe{
-#'    \item{fishery}{Character - Specifies the fishery (lobster, sea_cucumber, or urchin)}
 #'    \item{eu_rnpa}{Character - A 10-digit unique identifier for each economic unit}
+#'    \item{year}{Numeric - The year of the fishing seson}
+#'    \item{fishery}{Character - Specifies the fishery (lobster, sea_cucumber, or urchin)}
 #'    \item{catch}{Numeric - Fisherie sproduction, in Metric tons}
 #'    \item{revenue}{Numeric - Revenue generated from selling the catch, in thousands of MXN}
 #' }
 #'
-#' @source Data are oroginally reported by CONAPESCA (Mexico's fishery management agency)
+#' @source Data are originally reported by CONAPESCA (Mexico's fishery management agency)
 #' and made available online at: \url{https://conapesca.gob.mx/wb/cona/avisos_arribo_cosecha_produccion}
 #' This clean version comes from Villaseñor-Derbez, J.C., Arafeh-Dalmau, N. & Micheli, F. Past and future
 #' impacts of marine heatwaves on small-scale fisheries in Baja California, Mexico.

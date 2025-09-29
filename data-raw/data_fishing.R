@@ -9,8 +9,7 @@
 ################################################################################
 
 data_fishing <- readRDS(url("https://github.com/jcvdav/ssf_shocks/raw/refs/heads/main/data/processed/annual_fishery_panel.rds")) |>
-  dplyr::filter(year == 2021) |>
-  dplyr::group_by(eu_rnpa, fishery) |>
+  dplyr::group_by(eu_rnpa, year, fishery) |>
   dplyr::summarize(catch = sum(live_weight, na.rm = T) / 1e3,
                    revenue = sum(value, na.rm = T) / 1e3,
                    .groups = "drop")
