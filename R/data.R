@@ -208,6 +208,22 @@
 #' }
 "data_PIPA"
 
+#' Fish counts from Baja California's Kelp forests
+#'
+#' Transect data in "wide" format, containing size and abundance data for
+#' fish species found in Baja California's Kelp Forests
+#'
+#' @description
+#' A data.frame with 807 rows and 25 columns
+#' \describe{
+#'    \item{location}{Character - Three (or four)-letter code used to identify the general sampling location}
+#'    \item{site}{Character - Indicates whether the northen or southern end of the kelp forest from a location was surveyed}
+#'    \item{transect}{Numeric, transect number}
+#'    \item{genus_species}{Character - Scientific name for the species counted}
+#'    \item{TL_5, TL_10, ... TL_105}{Character - Abundances within each size bin (TL = Total length in cm)}
+#'  }
+"data_kelp"
+
 #"scuba"
 
 #"transects"
