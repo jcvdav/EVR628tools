@@ -153,6 +153,42 @@
 #' Commun Earth Environ 5, 623 (2024). \url{https://doi.org/10.1038/s43247-024-01696-x}
 "data_heatwaves"
 
+#' Marine Heatwaves in TURF-managed fisheries
+#'
+#' @description
+#' Daily time series of sea surface temperature, seasonality, and marine heatwave thresholds for a single site
+#'
+#' @format ## `data_mhw_ts`
+#' A data.frame with 1431 rows and 4 columns:
+#' \describe{
+#'    \item{date}{Date - The date}
+#'    \item{temp}{Numeric - Sea surface temperature, in °C}
+#'    \item{seas}{Numeric - Seasonality, in °C}
+#'    \item{thresh}{Numeric - Threshold to detect as marine heatwave, in °C}
+#'    }
+#' @source Villaseñor-Derbez, J.C., Arafeh-Dalmau, N. & Micheli, F. Past and future
+#' impacts of marine heatwaves on small-scale fisheries in Baja California, Mexico.
+#' Commun Earth Environ 5, 623 (2024). \url{https://doi.org/10.1038/s43247-024-01696-x}
+"data_mhw_ts"
+
+#' Marine Heatwaves in TURF-managed fisheries
+#'
+#' @description
+#' Marine heatwave events detected for one location
+#'
+#' @format ## `data_mhw_events`
+#' A data.frame with 82 rows and 5 columns:
+#' \describe{
+#'    \item{date_peak}{Date - The date in which the event was at its maximum}
+#'    \item{intensity_mean}{Numeric - Mean MHW intensity, in °C}
+#'    \item{intensity_max}{Numeric - Max MHW intensity, in °C}
+#'    \item{intensity_cumulative}{Numeric - Cumulative MHW intensity, in °C days}
+#'    }
+#' @source Villaseñor-Derbez, J.C., Arafeh-Dalmau, N. & Micheli, F. Past and future
+#' impacts of marine heatwaves on small-scale fisheries in Baja California, Mexico.
+#' Commun Earth Environ 5, 623 (2024). \url{https://doi.org/10.1038/s43247-024-01696-x}
+"data_mhw_events"
+
 #' Fisheries production and revenues
 #' Information in fisheries production and revenues for 41 economic units
 #' targeting 3 species in the Baja California Peninsula between 2000 and 2021
