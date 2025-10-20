@@ -55,12 +55,49 @@ api_key <- Sys.getenv("GFW_TOKEN")
 effort_raster <- gfwr::get_raster(
   key = api_key,
   start_date = "2024-01-01",
-  end_date = "2024-12-31",
+  end_date = "2025-01-01",
   spatial_resolution = "LOW",
   temporal_resolution = "MONTHLY",
   region_source = "USER_SHAPEFILE",
   region = gom_sf
 )
+
+# Get evetns by vessel
+events <- gfwr::get_event(event_type = "FISHING",
+                          start_date = "2024-01-01",
+                          end_date = "2025-01-01",
+                          key = api_key,
+                          region_source = "USER_SHAPEFILE",
+                          region = gom_sf)
+
+# Get vessel info
+vessel_info <- gfwr::get_vessel_info(search_type = "id",
+                                     ids = unique(events$vesselId),
+                                     key = api)
+
+# Get vessel gear types only
+vessel_info <- vessel_info$combinedSourcesInfo |>
+  dplyr::group_by(vesselId) |>
+  dplyr::slice_head(n = 1) |>
+  dplyr::select(vesselId, geartypes_name)
+
+# Build final table of effort by gear type
+data_geartypes <- events |>
+  dplyr::group_by(vesselId) |>
+  dplyr::summarize(hours = sum(end - start),
+                   .groups = "drop") |>
+  dplyr::mutate(hours = as.numeric(hours, units = "hours")) |>
+  dplyr::inner_join(vessel_info, by = "vesselId") |>
+  dplyr::rename(geartype = geartypes_name,
+                vessel_id = vesselId) |>
+  dplyr::filter(!geartype %in% c("INCONCLUSIVE",
+                                 "OTHER",
+                                 "FIXED_GEAR",
+                                 "GEAR",
+                                 "POTS_AND_TRAPS")) |>
+  dplyr::group_by(vessel_id, geartype) |>
+  dplyr::summarize(effort_hours = sum(hours),
+                   .groups = "drop")
 
 # Convert raster to data frame for easier manipulation
 data_fishing_effort <- effort_raster |>
@@ -79,4 +116,5 @@ data_fishing_effort <- effort_raster |>
     effort_hours = apparent_fishing_hours)
 
 # Export -----------------------------------------------------------------------
+usethis::use_data(data_geartypes, overwrite = T)
 usethis::use_data(data_fishing_effort, overwrite = TRUE)

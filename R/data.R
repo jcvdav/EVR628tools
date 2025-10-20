@@ -77,6 +77,25 @@
 #' 904-908.
 "data_fishing_effort"
 
+#' Fishing effort by gear type and vessel
+#'
+#' @description
+#' AIS-derived dishing effort for vessels in the Gulf of Mexico during 2024
+#'
+#'
+#' @format ## `data_geartypes`
+#' A data frame with 840 rows and 3 columns:
+#' \describe{
+#'   \item{vessel_id}{Characgter - Unique vessel identifier}
+#'   \item{geartype}{Character - Type of gear}
+#'   \item{effort_hours}{Numeric - Total fishing effort, measured in hours}
+#' }
+#' @source Data were generated using the `gfwr` package
+#' \url{https://github.com/GlobalFishingWatch/gfwr}. See also Kroodsma
+#' et al. "Tracking the global footprint of fisheries." Science 359.6378 (2018):
+#' 904-908.
+"data_geartypes"
+
 #' Sea Surface Temperature
 #'
 #' @description
