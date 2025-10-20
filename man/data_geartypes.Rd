@@ -8,7 +8,7 @@
 ## `data_geartypes`
 A data frame with 840 rows and 3 columns:
 \describe{
-  \item{vessel_id}{Characgter - Unique vessel identifier}
+  \item{vessel_id}{Character - Unique vessel identifier}
   \item{geartype}{Character - Type of gear}
   \item{effort_hours}{Numeric - Total fishing effort, measured in hours}
 }
