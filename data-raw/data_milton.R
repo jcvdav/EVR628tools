@@ -22,5 +22,10 @@ data_milton <- readr::read_csv("https://www.ncei.noaa.gov/data/international-bes
          wind_speed = USA_WIND, pressure = USA_PRES, sshs = USA_SSHS) |>
   dplyr::mutate(sshs = as.character(sshs))
 
+data_milton_sf <- data_milton |>
+  sf::st_as_sf(coords = c("lon", "lat"),
+               crs = 4326)
+
 # Export
 usethis::use_data(data_milton, overwrite = TRUE)
+usethis::use_data(data_milton_sf, overwrite = TRUE)
