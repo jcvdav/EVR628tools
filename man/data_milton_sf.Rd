@@ -6,13 +6,12 @@
 \title{Hurricane tracks for Milton (2024) as an sf object}
 \format{
 ## `data_milton_sf`
-A data frame with 62 rows and 7 columns:
+An sf object with 62 rows and 7 columns:
 \describe{
   \item{name}{Character - Storm name given by the agency}
   \item{iso_time}{POSIXct - SO Time provided in Universal Time Coordinates (UTC). Format is YYYY-MM-DD HH:mm:ss Most points are provided at 6 hour intervals.}
   \item{wind_speed}{Numeric - Maximum sustained wind speed in knots: 0 - 300 kts. (1-min. mean)}
   \item{pressure}{Numeric - Minimum sea level pressure, 850 - 1050 mb.}
-  \item{geometrt}{sfc -  A simple fieature column containing points for the location of the storm center}
   \item{sshs}{Character - Saffir–Simpson hurricane scale. The values are defined as follows:
   \describe{
      \item{-5}{Unknown}
@@ -29,10 +28,11 @@ A data frame with 62 rows and 7 columns:
      \item{5}{Category 5 (W >= 137)}
   }
   }
+  \item{geometry}{sfc -  A simple feature column containing POINTS for the location of the storm center}
 }
 }
 \source{
-\url{https://www.ncei.noaa.gov/products/international-best-track-archive}
+Data come from: \url{https://www.ncei.noaa.gov/products/international-best-track-archive}
 }
 \usage{
 data_milton_sf

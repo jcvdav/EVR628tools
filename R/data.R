@@ -28,7 +28,7 @@
 #'   }
 #'   }
 #' }
-#' @source \url{https://www.ncei.noaa.gov/products/international-best-track-archive}
+#' @source Data come from: \url{https://www.ncei.noaa.gov/products/international-best-track-archive}
 "data_milton"
 
 #' Hurricane tracks for Milton (2024) as an sf object
@@ -36,13 +36,12 @@
 #' Observed hurricane track for center of storm Milton during 2024. This is a spatial version of data_milton
 #'
 #' @format ## `data_milton_sf`
-#' A data frame with 62 rows and 7 columns:
+#' An sf object with 62 rows and 7 columns:
 #' \describe{
 #'   \item{name}{Character - Storm name given by the agency}
 #'   \item{iso_time}{POSIXct - SO Time provided in Universal Time Coordinates (UTC). Format is YYYY-MM-DD HH:mm:ss Most points are provided at 6 hour intervals.}
 #'   \item{wind_speed}{Numeric - Maximum sustained wind speed in knots: 0 - 300 kts. (1-min. mean)}
 #'   \item{pressure}{Numeric - Minimum sea level pressure, 850 - 1050 mb.}
-#'   \item{geometrt}{sfc -  A simple fieature column containing points for the location of the storm center}
 #'   \item{sshs}{Character - Saffir–Simpson hurricane scale. The values are defined as follows:
 #'   \describe{
 #'      \item{-5}{Unknown}
@@ -59,9 +58,40 @@
 #'      \item{5}{Category 5 (W >= 137)}
 #'   }
 #'   }
+#'   \item{geometry}{sfc -  A simple feature column containing POINTS for the location of the storm center}
 #' }
-#' @source \url{https://www.ncei.noaa.gov/products/international-best-track-archive}
+#' @source Data come from: \url{https://www.ncei.noaa.gov/products/international-best-track-archive}
 "data_milton_sf"
+
+#' Hurricane tracks as an sf object
+#'
+#' Observed hurricane tracks for 64 storms in the North Atlantic (2022-2024).
+#'
+#' @format ## `data_hurricanes`
+#' An sf object with 51 rows and 4 columns:
+#' \describe{
+#'   \item{season}{Numeric - Indicates the year in which the storm was named}
+#'   \item{name}{Character - Storm name given by the agency}
+#'   \item{max_sshs}{Character - Maximum value attained by the stormed, using the Saffir–Simpson hurricane scale. The values are defined as follows:
+#'   \describe{
+#'      \item{-5}{Unknown}
+#'      \item{-4}{Post-tropical}
+#'      \item{-3}{Miscellaneous disturbances}
+#'      \item{-2}{Subtropical}
+#'      Tropical systems classified based on wind speeds
+#'      \item{-1}{Tropical depression (W<34)}
+#'      \item{0}{Tropical storm (34<W<64)}
+#'      \item{1}{Category 1 (64<=W<83)}
+#'      \item{2}{Category 2 (83<=W<96)}
+#'      \item{3}{Category 3 (96<=W<113)}
+#'      \item{4}{Category 4 (113<=W<137)}
+#'      \item{5}{Category 5 (W >= 137)}
+#'   }
+#'   }
+#'   \item{geometry}{sfc -  A simple feature column containing LINESTRINGS for storm tracks}
+#' }
+#' @source Data come from: \url{https://www.ncei.noaa.gov/products/international-best-track-archive}
+"data_hurricanes"
 
 #' Lionfish biometry
 #'
