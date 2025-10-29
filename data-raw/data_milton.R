@@ -41,7 +41,8 @@ data_hurricanes <- readr::read_csv("https://www.ncei.noaa.gov/data/international
   dplyr::arrange(iso_time) |>
   dplyr::group_by(season, name) |>
   dplyr::summarize(max_sshs = max(sshs),
-                   do_union = FALSE) |>
+                   do_union = FALSE,
+                   .groups = "drop") |>
   sf::st_cast("LINESTRING")
 
 # Export
