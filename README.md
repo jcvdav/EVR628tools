@@ -20,8 +20,8 @@ Scientists](https://jcvdav.github.io/EVR_628/).
 You can install the development version of EVR628tools like so:
 
 ``` r
-# install.packages("pak") #In case you don't have pak installed
-pak::pak("jcvdav/EVR628tools")
+# install.packages("remotes") #In case you don't have the package installed
+remotes::install_github("jcvdav/EVR628tools")
 ```
 
 ## Example
