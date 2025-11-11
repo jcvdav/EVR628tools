@@ -1,0 +1,123 @@
+# EVR628tools
+
+![](reference/figures/hexsticker.png)
+
+`EVR628tools` contains a series of datasets, palettes, and functions to
+help in the instruction of [EVR 528 / 628 Introduction to Data
+Management and Visualization for Environmental
+Scientists](https://jcvdav.github.io/EVR_628/).
+
+## Installation
+
+You can install the development version of EVR628tools like so:
+
+``` r
+# install.packages("remotes") #In case you don't have the package installed
+remotes::install_github("jcvdav/EVR628tools")
+```
+
+## Example
+
+The package contains functions with the preface `data_*` and
+`palette_*`. The following example uses one of each. Take a look at the
+[Reference](https://jcvdav.github.io/EVR628tools/reference/index.md) to
+see a full list of datasets and functions available. The task at hand is
+simple. We’ll use the
+[`EVR628tools::data_lionfish`](https://jcvdav.github.io/EVR628tools/reference/data_lionfish.md)
+data to make a plot showing how fish size (length and weight) varies by
+depth using a scatterplot. We’ll use the
+[`EVR628tools::palette_UM()`](https://jcvdav.github.io/EVR628tools/reference/palette_UM.md)
+color palette to color our points by site. I recommend that you look at
+the documentation of the data
+[`?EVR628tools::data_lionfish`](https://jcvdav.github.io/EVR628tools/reference/data_lionfish.md)
+and the color palette
+[`EVR628tools::palette_UM()`](https://jcvdav.github.io/EVR628tools/reference/palette_UM.md)
+before running the code.
+
+``` r
+library(ggplot2)
+
+# First, inspect the data
+head(EVR628tools::data_lionfish)
+#> # A tibble: 6 × 9
+#>   id        site    lat   lon total_length_mm total_weight_gr size_class depth_m
+#>   <chr>     <chr> <dbl> <dbl>           <dbl>           <dbl> <chr>        <dbl>
+#> 1 001-Po-1… Para…  20.5 -87.2             213           113.  large         38.1
+#> 2 002-Po-2… Para…  20.5 -87.2             124            27.6 medium        27.9
+#> 3 003-Pd-2… Pared  20.5 -87.2             166            52.3 medium        18.5
+#> 4 004-Cs-1… Cano…  20.5 -87.2             203           123.  large         15.5
+#> 5 005-Cs-1… Cano…  20.5 -87.2             212           129   large         15  
+#> 6 006-Pl-2… Paam…  20.5 -87.2             210           139.  large         22.7
+#> # ℹ 1 more variable: temperature_C <dbl>
+
+# Now let's build a plot
+ggplot(data = EVR628tools::data_lionfish,
+       mapping = aes(x = depth_m,
+                     y = total_length_mm,
+                     size = total_weight_gr,
+                     fill = site)) +
+  geom_point(shape = 21, color = 1) +
+  scale_fill_manual(values = EVR628tools::palette_UM(n = 10)) +
+  theme_bw() +
+  labs(x = "Depth (m)",
+       y = "Total Length (mm)",
+       size = "Total Weight (gr)",
+       fill = "Site")
+```
+
+![Sample figure using data and color palettes from the \`EVR628tools\`
+package. The x-axis shows depth of collection (m) and the y-axis shows
+fish total length (cm). Marker size idnicates the wet weight of the
+fish, and marker color the site from which it was
+sampled.](reference/figures/README-example-1.png)
+
+Sample figure using data and color palettes from the `EVR628tools`
+package. The x-axis shows depth of collection (m) and the y-axis shows
+fish total length (cm). Marker size idnicates the wet weight of the
+fish, and marker color the site from which it was sampled.
+
+# Package index
+
+## All functions
+
+- [`create_dirs()`](https://jcvdav.github.io/EVR628tools/reference/create_dirs.md)
+  : Create standard project directories
+- [`data_MPA`](https://jcvdav.github.io/EVR628tools/reference/data_MPA.md)
+  : SIMULATED biomass inside and outside a Marine Protected Area
+- [`data_PIPA`](https://jcvdav.github.io/EVR628tools/reference/data_PIPA.md)
+  : CPUE near and far the Phoenix Islands Protected Area in Kiribati
+- [`data_fishing`](https://jcvdav.github.io/EVR628tools/reference/data_fishing.md)
+  : Fisheries production and revenues Information in fisheries
+  production and revenues for 41 economic units targeting 3 species in
+  the Baja California Peninsula between 2000 and 2021
+- [`data_fishing_effort`](https://jcvdav.github.io/EVR628tools/reference/data_fishing_effort.md)
+  : Apparent fishing effort in the Gulf of Mexico
+- [`data_geartypes`](https://jcvdav.github.io/EVR628tools/reference/data_geartypes.md)
+  : Fishing effort by gear type and vessel
+- [`data_heatwaves`](https://jcvdav.github.io/EVR628tools/reference/data_heatwaves.md)
+  : Marine Heatwaves in TURF-managed fisheries
+- [`data_hurricanes`](https://jcvdav.github.io/EVR628tools/reference/data_hurricanes.md)
+  : Hurricane tracks as an sf object
+- [`data_kelp`](https://jcvdav.github.io/EVR628tools/reference/data_kelp.md)
+  : Fish counts from Baja California's Kelp forests
+- [`data_lionfish`](https://jcvdav.github.io/EVR628tools/reference/data_lionfish.md)
+  : Lionfish biometry
+- [`data_mhw_events`](https://jcvdav.github.io/EVR628tools/reference/data_mhw_events.md)
+  : Marine Heatwaves in TURF-managed fisheries
+- [`data_mhw_ts`](https://jcvdav.github.io/EVR628tools/reference/data_mhw_ts.md)
+  : Marine Heatwaves in TURF-managed fisheries
+- [`data_milton`](https://jcvdav.github.io/EVR628tools/reference/data_milton.md)
+  : Hurricane tracks for Milton (2024)
+- [`data_milton_sf`](https://jcvdav.github.io/EVR628tools/reference/data_milton_sf.md)
+  : Hurricane tracks for Milton (2024) as an sf object
+- [`data_sst`](https://jcvdav.github.io/EVR628tools/reference/data_sst.md)
+  : Sea Surface Temperature
+- [`data_sst_anom`](https://jcvdav.github.io/EVR628tools/reference/data_sst_anom.md)
+  : Sea Surface Temperature Anomaly
+- [`palette_IPCC()`](https://jcvdav.github.io/EVR628tools/reference/palette_IPCC.md)
+  : IPCC color palettes
+- [`palette_IPCC_ssp()`](https://jcvdav.github.io/EVR628tools/reference/palette_IPCC_ssp.md)
+  : IPCC color palette for SSPs
+- [`palette_UM()`](https://jcvdav.github.io/EVR628tools/reference/palette_UM.md)
+  : UM Color palette
+
